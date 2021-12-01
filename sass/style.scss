@@ -1,0 +1,61 @@
+@import "mixins";
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  @include centerItems;
+
+  // removing input number arrow buttons
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .body {
+    @include centerItems;
+    flex-direction: column;
+    background-color: $body-bg-color;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 20px;
+
+    .row-line {
+      display: flex;
+
+      input {
+        border: none;
+        outline: 0;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        border-radius: 5px;
+      }
+
+      .button-calc {
+        @include centerItems;
+        height: 70px;
+        width: 70px;
+        margin: 7px;
+        border-radius: 50%;
+        color: $button-font-color;
+        background: linear-gradient(145deg, #1f1d1d, #242222);
+        box-shadow: 8px 8px 16px #141313, -8px -8px 16px #302d2d;
+
+        &:active {
+          background-color: $button-hover-bg-color;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
