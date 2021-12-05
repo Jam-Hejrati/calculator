@@ -53,6 +53,7 @@ body .body .row-line .button-calc {
   width: 70px;
   margin: 7px;
   border-radius: 50%;
+  cursor: pointer;
   color: #ffffff;
   background: linear-gradient(145deg, #1f1d1d, #242222);
   box-shadow: 8px 8px 16px #141313, -8px -8px 16px #302d2d;

@@ -4,50 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-  </head>
-  <body>
-    <!-- whole calculator -->
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
+    <body>
+      <!-- whole calculator -->
     <div class="body">
       <div class="row-line">
-        <input type="number" step="0" />
+        <input type="number" id="input" />
       </div>
       <div class="buttons">
         <div class="row-line">
-          <div class="button-calc">1</div>
-          <div class="button-calc">2</div>
-          <div class="button-calc">3</div>
-          <div class="button-calc">/</div>
+          <div class="button-calc number">1</div>
+          <div class="button-calc number">2</div>
+          <div class="button-calc number">3</div>
+          <div class="button-calc" id="divide-btn">/</div>
         </div>
         <div class="row-line">
-          <div class="button-calc">4</div>
-          <div class="button-calc">5</div>
-          <div class="button-calc">6</div>
-          <div class="button-calc">*</div>
+          <div class="button-calc number">4</div>
+          <div class="button-calc number">5</div>
+          <div class="button-calc number">6</div>
+          <div class="button-calc" id="multiple-btn">*</div>
         </div>
         <div class="row-line">
-          <div class="button-calc">7</div>
-          <div class="button-calc">8</div>
-          <div class="button-calc">9</div>
-          <div class="button-calc">+</div>
+          <div class="button-calc number">7</div>
+          <div class="button-calc number">8</div>
+          <div class="button-calc number">9</div>
+          <div class="button-calc" id="sum-btn">+</div>
         </div>
         <div class="row-line">
-          <div class="button-calc">.</div>
-          <div class="button-calc">0</div>
-          <div class="button-calc">=</div>
-          <div class="button-calc">-</div>
+          <div class="button-calc" id="dot-btn">.</div>
+          <div class="button-calc number">0</div>
+          <div class="button-calc" id="equal-btn">=</div>
+          <div class="button-calc" id="subtraction-btn">-</div>
         </div>
       </div>
     </div>
-
-    <!-- bootstrap js script -->
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
