@@ -55,12 +55,21 @@ body .container .row-line {
 
 body .container .row-line .result-viewer {
   width: 26vw;
+  height: 70px;
   font-size: 3rem;
-  background-color: aliceblue;
+  background-color: #f0f8ff;
   margin-bottom: 20px;
   padding: 10px 15px;
   border-radius: 5px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .container .row-line .button-calc {

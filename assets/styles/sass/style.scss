@@ -9,10 +9,10 @@ html {
 
 body {
    height: 100vh;
-   @include centerItems;
+   @include flexHandler(center, center);
 
    .container {
-      @include centerItems;
+      @include flexHandler(center, center);
       flex-direction: column;
       background-color: $body-bg-color;
       border-radius: 5px;
@@ -24,16 +24,17 @@ body {
 
          .result-viewer {
             width: 26vw;
+            height: 70px;
             font-size: 3rem;
-            background-color: aliceblue;
+            background-color: $result-viewer-bg-color;
             margin-bottom: 20px;
             padding: 10px 15px;
             border-radius: 5px;
-            text-align: center;
+            @include flexHandler(center, center);
          }
 
          .button-calc {
-            @include centerItems;
+            @include flexHandler(center, center);
             font-size: 2.4rem;
             height: 70px;
             width: 70px;
