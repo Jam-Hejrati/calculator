@@ -1,54 +1,79 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
 }
 
 body {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body input::-webkit-outer-spin-button,
-body input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-body input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-body .body {
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #222020;
   border-radius: 5px;
   font-size: 20px;
   padding: 20px;
 }
 
-body .body .row-line {
+body .container .row-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-body .body .row-line input {
-  border: none;
-  outline: 0;
-  width: 100%;
+body .container .row-line .result-viewer {
+  width: 26vw;
+  font-size: 3rem;
+  background-color: aliceblue;
   margin-bottom: 20px;
   padding: 10px 15px;
   border-radius: 5px;
+  text-align: center;
 }
 
-body .body .row-line .button-calc {
+body .container .row-line .button-calc {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.4rem;
   height: 70px;
   width: 70px;
   margin: 7px;
@@ -56,11 +81,13 @@ body .body .row-line .button-calc {
   cursor: pointer;
   color: #ffffff;
   background: linear-gradient(145deg, #1f1d1d, #242222);
-  box-shadow: 8px 8px 16px #141313, -8px -8px 16px #302d2d;
+  -webkit-box-shadow: 8px 8px 16px #141313, -8px -8px 16px #302d2d;
+          box-shadow: 8px 8px 16px #141313, -8px -8px 16px #302d2d;
 }
 
-body .body .row-line .button-calc:active {
+body .container .row-line .button-calc:active {
   background-color: #222020;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 /*# sourceMappingURL=style.css.map */
