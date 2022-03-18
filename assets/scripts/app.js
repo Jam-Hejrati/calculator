@@ -3,6 +3,10 @@ let currentInputNum = "";
 let currentValue = DEFAULT_RESULT;
 resultViewer.innerHTML = currentValue;
 
+const userInput = () => {
+   return Number(currentInputNum);
+};
+
 const numberHandler = (btnValue) => {
    currentInputNum += btnValue;
    resultViewer.innerHTML = currentInputNum;
@@ -10,13 +14,20 @@ const numberHandler = (btnValue) => {
 };
 
 const sumHandler = () => {
-   currentValue += Number(currentInputNum);
+   currentValue += userInput();
    currentInputNum = "";
    resultViewer.innerHTML = currentValue;
 };
 
 const subtractHandler = () => {
-   currentValue -= Number(currentInputNum);
+   currentValue -= userInput();
+   currentInputNum = "";
+   resultViewer.innerHTML = currentValue;
+};
+
+const multipleHandler = () => {
+   currentValue = 1; 
+   currentValue *= userInput();
    currentInputNum = "";
    resultViewer.innerHTML = currentValue;
 };
@@ -26,3 +37,4 @@ numberBtn.forEach((number) => {
 });
 sumBtn.addEventListener("click", sumHandler);
 subtractBtn.addEventListener("click", subtractHandler);
+multipleBtn.addEventListener("click" , multipleHandler);
