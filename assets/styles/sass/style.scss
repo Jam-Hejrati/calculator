@@ -30,6 +30,7 @@ body {
             margin-bottom: 20px;
             padding: 10px 15px;
             border-radius: 5px;
+            overflow: hidden;
             @include flexHandler(center, center);
          }
 

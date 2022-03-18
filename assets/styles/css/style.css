@@ -61,6 +61,7 @@ body .container .row-line .result-viewer {
   margin-bottom: 20px;
   padding: 10px 15px;
   border-radius: 5px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
