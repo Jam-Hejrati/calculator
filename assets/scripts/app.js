@@ -1,11 +1,12 @@
 const DEFAULT_RESULT = 0;
-const DEFAULT_RESULT_FOR_MUL_AND_SUB = 1;
 let currentInputNum = "";
 let currentValue = DEFAULT_RESULT;
-let currentValueSubMul = DEFAULT_RESULT_FOR_MUL_AND_SUB;
 resultViewer.innerHTML = currentValue;
 
 const userInput = () => {
+   if(currentInputNum === ""){
+      return 1;
+   }
    return Number(currentInputNum);
 };
 
@@ -29,9 +30,17 @@ const subtractHandler = () => {
 
 const multipleHandler = () => {
    const userEnteredNumber = userInput();
-   currentValueSubMul *= userEnteredNumber;
+   if (currentValue === 0) {
+      currentValue = 1;
+      currentValue *= userEnteredNumber;
+   } else if (userInput() === 0) {
+      currentValue = 0;
+      currentValue *= userEnteredNumber;
+   } else{
+      currentValue *= userEnteredNumber;      
+   }
    currentInputNum = "";
-   resultViewer.innerHTML = currentValueSubMul;
+   resultViewer.innerHTML = currentValue;
 };
 
 numberBtn.forEach((number) => {
