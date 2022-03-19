@@ -43,9 +43,25 @@ const multipleHandler = () => {
    resultViewer.innerHTML = currentValue;
 };
 
+const divideHandler = () => {
+   const userEnteredNumber = userInput();
+   if (currentValue === 0) {
+      currentValue = 1;
+      currentValue /= userEnteredNumber;
+   } else if (userInput() === 0) {
+      currentValue = 0;
+      currentValue /= userEnteredNumber;
+   } else{
+      currentValue /= userEnteredNumber;      
+   }
+   currentInputNum = "";
+   resultViewer.innerHTML = currentValue;
+};
+
 numberBtn.forEach((number) => {
    number.addEventListener("click", numberHandler.bind(this, number.innerHTML));
 });
 sumBtn.addEventListener("click", sumHandler);
 subtractBtn.addEventListener("click", subtractHandler);
 multipleBtn.addEventListener("click", multipleHandler);
+divideBtn.addEventListener("click" , divideHandler);
