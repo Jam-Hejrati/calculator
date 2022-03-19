@@ -66,6 +66,12 @@ const divideHandler = () => {
    resultViewer.innerHTML = validateNumber(currentValue);
 };
 
+const cleanResult = () =>{
+   currentInputNum = '';
+   currentValue = DEFAULT_RESULT;
+   resultViewer.innerHTML = currentValue;
+}
+
 numberBtn.forEach((number) => {
    number.addEventListener("click", numberHandler.bind(this, number.innerHTML));
 });
@@ -73,3 +79,4 @@ sumBtn.addEventListener("click", sumHandler);
 subtractBtn.addEventListener("click", subtractHandler);
 multipleBtn.addEventListener("click", multipleHandler);
 divideBtn.addEventListener("click" , divideHandler);
+clearBtn.addEventListener("click" , cleanResult); 
