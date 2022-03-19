@@ -29,9 +29,20 @@ body {
             background-color: $result-viewer-bg-color;
             margin-bottom: 20px;
             padding: 10px 15px;
-            border-radius: 5px;
+            border-radius: 5px 0 0 5px;
             overflow: hidden;
             @include flexHandler(center, center);
+         }
+
+         .clear-btn{
+            height: 70px;
+            padding: 0 10px;
+            border-left: 1px solid #111;
+            border-radius: 0 5px 5px 0;
+            color: $body-bg-color;
+            cursor: pointer;
+            background-color: $result-viewer-bg-color;
+            @include flexHandler(center,center);
          }
 
          .button-calc {

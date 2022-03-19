@@ -60,8 +60,27 @@ body .container .row-line .result-viewer {
   background-color: #f0f8ff;
   margin-bottom: 20px;
   padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .row-line .clear-btn {
+  height: 70px;
+  padding: 0 10px;
+  border-left: 1px solid #111;
+  border-radius: 0 5px 5px 0;
+  color: #222020;
+  cursor: pointer;
+  background-color: #f0f8ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
