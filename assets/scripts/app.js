@@ -10,6 +10,14 @@ const userInput = () => {
    return Number(currentInputNum);
 };
 
+const validateNumber = (number) =>{
+   if(isNaN(number)){
+      return "reset the calculator";
+   }else{
+      return number;
+   }
+}
+
 const numberHandler = (btnValue) => {
    currentInputNum += btnValue;
    resultViewer.innerHTML = currentInputNum;
@@ -19,13 +27,13 @@ const numberHandler = (btnValue) => {
 const sumHandler = () => {
    currentValue += userInput();
    currentInputNum = "";
-   resultViewer.innerHTML = currentValue;
+   resultViewer.innerHTML = validateNumber(currentValue);
 };
 
 const subtractHandler = () => {
    currentValue -= userInput();
    currentInputNum = "";
-   resultViewer.innerHTML = currentValue;
+   resultViewer.innerHTML = validateNumber(currentValue);
 };
 
 const multipleHandler = () => {
@@ -40,7 +48,7 @@ const multipleHandler = () => {
       currentValue *= userEnteredNumber;      
    }
    currentInputNum = "";
-   resultViewer.innerHTML = currentValue;
+   resultViewer.innerHTML = validateNumber(currentValue);
 };
 
 const divideHandler = () => {
@@ -55,7 +63,7 @@ const divideHandler = () => {
       currentValue /= userEnteredNumber;      
    }
    currentInputNum = "";
-   resultViewer.innerHTML = currentValue;
+   resultViewer.innerHTML = validateNumber(currentValue);
 };
 
 numberBtn.forEach((number) => {
