@@ -55,9 +55,8 @@ const divideHandler = () => {
    const userEnteredNumber = userInput();
    if (currentValue === 0) {
       currentValue = 1;
-      currentValue /= userEnteredNumber;
+      currentValue = userEnteredNumber / currentValue;
    } else if (userInput() === 0) {
-      currentValue = 0;
       currentValue /= userEnteredNumber;
    } else{
       currentValue /= userEnteredNumber;      
