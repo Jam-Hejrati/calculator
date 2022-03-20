@@ -41,7 +41,7 @@ body {
             border-radius: 0 5px 5px 0;
             color: $body-bg-color;
             cursor: pointer;
-            background-color: $result-viewer-bg-color;
+            background-color: $clear-button-bg-color;
             @include flexHandler(center,center);
          }
 
