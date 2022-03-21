@@ -4,34 +4,35 @@ let currentValue = DEFAULT_RESULT;
 resultViewer.innerHTML = currentValue;
 
 const userInput = () => {
-   if(currentInputNum === ""){
+   if (currentInputNum === "") {
       return 1;
    }
    return Number(currentInputNum);
 };
 
-const validateNumber = (number) =>{
-   if(isNaN(number)){
+const validateNumber = (number) => {
+   if (isNaN(number)) {
       return "reset the calculator";
-   }else{
+   } else {
       return number;
    }
-}
+};
 
 const numberHandler = (btnValue) => {
    currentInputNum += btnValue;
    resultViewer.innerHTML = currentInputNum;
-   console.log(currentInputNum);
 };
 
 const sumHandler = () => {
-   currentValue += userInput();
+   const userEnteredNumber = userInput();
+   currentValue += userEnteredNumber;
    currentInputNum = "";
    resultViewer.innerHTML = validateNumber(currentValue);
 };
 
 const subtractHandler = () => {
-   currentValue -= userInput();
+   const userEnteredNumber = userInput();
+   currentValue -= userEnteredNumber;
    currentInputNum = "";
    resultViewer.innerHTML = validateNumber(currentValue);
 };
@@ -44,8 +45,8 @@ const multipleHandler = () => {
    } else if (userInput() === 0) {
       currentValue = 0;
       currentValue *= userEnteredNumber;
-   } else{
-      currentValue *= userEnteredNumber;      
+   } else {
+      currentValue *= userEnteredNumber;
    }
    currentInputNum = "";
    resultViewer.innerHTML = validateNumber(currentValue);
@@ -58,18 +59,22 @@ const divideHandler = () => {
       currentValue = userEnteredNumber / currentValue;
    } else if (userInput() === 0) {
       currentValue /= userEnteredNumber;
-   } else{
-      currentValue /= userEnteredNumber;      
+   } else {
+      currentValue /= userEnteredNumber;
    }
    currentInputNum = "";
    resultViewer.innerHTML = validateNumber(currentValue);
 };
 
-const cleanResult = () =>{
-   currentInputNum = '';
+const cleanResult = () => {
+   currentInputNum = "";
    currentValue = DEFAULT_RESULT;
    resultViewer.innerHTML = currentValue;
-}
+};
+
+const equlHandler = () => {
+   alert(`The last result is ${currentValue}.`);
+};
 
 numberBtn.forEach((number) => {
    number.addEventListener("click", numberHandler.bind(this, number.innerHTML));
@@ -77,5 +82,6 @@ numberBtn.forEach((number) => {
 sumBtn.addEventListener("click", sumHandler);
 subtractBtn.addEventListener("click", subtractHandler);
 multipleBtn.addEventListener("click", multipleHandler);
-divideBtn.addEventListener("click" , divideHandler);
-clearBtn.addEventListener("click" , cleanResult); 
+divideBtn.addEventListener("click", divideHandler);
+clearBtn.addEventListener("click", cleanResult);
+equalBtn.addEventListener("click", equlHandler);
